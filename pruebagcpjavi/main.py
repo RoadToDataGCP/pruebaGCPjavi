@@ -1,5 +1,19 @@
-def run_dataform_workflow():
-    print("deja el wassap k ase")
+from flask import Flask
 
+import os
+ 
+app = Flask(__name__)
+ 
+@app.route("/")
+
+def escribe_hora():
+
+    print("Hola mundo")
+ 
 if __name__ == "__main__":
-    run_dataform_workflow()
+
+    port = int(os.environ.get("PORT", 8080))
+
+    app.run(host="0.0.0.0", port=port)
+
+ 
