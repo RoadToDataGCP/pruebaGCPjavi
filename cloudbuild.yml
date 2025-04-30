@@ -1,13 +1,13 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/r2d-interno-dev/pruebagcpmam:v1.2-$COMMIT_SHA', './pruebagcpmam']
+    args: ['build', '-t', 'gcr.io/r2d-interno-dev/pruebagcpjavi:v1.2-$COMMIT_SHA', './pruebagcpjavi']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/r2d-interno-dev/pruebagcpmam:v1.2-$COMMIT_SHA']
+    args: ['push', 'gcr.io/r2d-interno-dev/pruebagcpjavi:v1.2-$COMMIT_SHA']
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run', 'jobs', 'deploy', 'pruebagcpmam', '--image', 'gcr.io/r2d-interno-dev/pruebagcpmam:v1.2-$COMMIT_SHA', '--region', 'europe-west1']
+    args: ['run', 'jobs', 'deploy', 'pruebagcpjavi', '--image', 'gcr.io/r2d-interno-dev/pruebagcpjavi:v1.2-$COMMIT_SHA', '--region', 'europe-west1']
 
 images:
   - 'gcr.io/r2d-interno-dev/pruebagcpmam:v1.2-$COMMIT_SHA'
 
-logsBucket: 'gs://pruebagcpmam/log_exports'
+logsBucket: 'gs://pruebagcpjavi/log_exports'
