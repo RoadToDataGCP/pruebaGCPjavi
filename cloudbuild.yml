@@ -8,6 +8,6 @@ steps:
     args: ['run', 'jobs', 'deploy', 'pruebagcpjavi', '--image', 'gcr.io/r2d-interno-dev/pruebagcpjavi:v1.2-$COMMIT_SHA', '--region', 'europe-west1']
 
 images:
-  - 'gcr.io/r2d-interno-dev/pruebagcpmam:v1.2-$COMMIT_SHA'
+  - 'gcr.io/r2d-interno-dev/pruebagcpjavi:v1.2-$COMMIT_SHA'
 
 logsBucket: 'gs://pruebagcpjavi/log_exports'
