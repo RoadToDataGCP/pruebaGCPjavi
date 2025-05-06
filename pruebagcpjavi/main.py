@@ -1,7 +1,7 @@
 import time
 
 def escribe_hora():
-    print("Escribiendo la hora..")
+    print("Escribiendo la hora...")
     hora = time.strftime("%H:%M:%S")
     print(f"La hora es: {hora}")
 
